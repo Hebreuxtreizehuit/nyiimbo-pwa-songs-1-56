@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyiimbo Zu Bukize</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyiimbo Zu Bukize</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
-    <h1>Nyiimbo Zu Bukize</h1>
-    <p>Songs 1–56 · Kinyiindu Hymnbook PWA</p>
+  <h1>Nyiimbo Zu Bukize</h1>
+  <p>Songs 1–56 · Kinyiindu Hymnbook PWA</p>
 </header>
 
+<!-- MAIN APP -->
 <div class="app">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
 
-        <!-- ✅ SEARCH (only ONE search box) -->
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search song number, title, or lyrics..."
-        />
+    <!-- SEARCH -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search song number, title, or lyrics..."
+    />
 
-        <!-- FILTER BUTTONS -->
-        <div class="filters">
-            <button id="allBtn">All</button>
-            <button id="favoritesBtn">Favorites</button>
-            <button id="increaseFont">A+</button>
-            <button id="decreaseFont">A-</button>
-        </div>
+    <!-- FILTER BUTTONS -->
+    <div class="filters">
+      <button id="allBtn">All</button>
+      <button id="favoritesBtn">Favorites</button>
+      <button id="increaseFont">A+</button>
+      <button id="decreaseFont">A-</button>
+    </div>
 
-        <!-- ✅ SONG LIST (VERY IMPORTANT) -->
-        <div id="songList" class="song-list"></div>
+    <!-- ✅ SONG LIST (THIS IS CRITICAL) -->
+    <div id="songList" class="song-list"></div>
 
-    </aside>
+  </aside>
 
-    <!-- MAIN CONTENT -->
-    <main class="content">
+  <!-- CONTENT AREA -->
+  <main class="content">
 
-        <div class="song-header">
-            <span id="songNumber" class="badge">Song 1</span>
-            <button id="favoriteBtn" class="star">☆</button>
-        </div>
+    <div class="song-header">
+      <span id="songNumber" class="badge">Song 1</span>
+      <button id="favoriteBtn" class="star">☆</button>
+    </div>
 
-        <h2 id="songTitle">Select a song</h2>
+    <h2 id="songTitle">Select a song</h2>
 
-        <!-- ✅ SONG TEXT -->
-        <div id="songContent" class="song-content"></div>
+    <div id="songContent" class="song-content"></div>
 
-        <!-- NAVIGATION -->
-        <div class="nav-buttons">
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
-        </div>
+    <div class="nav-buttons">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+    </div>
 
-    </main>
+  </main>
 
 </div>
 
@@ -68,10 +68,10 @@
 <script src="songs.js"></script>
 <script src="app.js"></script>
 
-<!-- PWA SERVICE WORKER -->
+<!-- SERVICE WORKER -->
 <script>
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.register('sw.js');
 }
 </script>
 
