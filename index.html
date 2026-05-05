@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Nyiimbo Zu Bukize - Songs 1-56</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Nyiimbo Zu Bukize</h1>
+      <input type="text" id="search" placeholder="Search song..." />
+      <p>Songs 1-56 • Kinyiindu Hymnbook PWA</p>
+    </div>
+    <button id="installBtn" class="install hidden">Install</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="searchBox">
+        <input id="searchInput" type="search" placeholder="Search song number, title, or lyrics..." />
+      </div>
+      <div class="tools">
+        <button id="showAllBtn">All</button>
+        <button id="favoritesBtn">Favorites</button>
+        <button id="increaseFontBtn">A+</button>
+        <button id="decreaseFontBtn">A-</button>
+      </div>
+      <div id="songList" class="songList"></div>
+    </aside>
+
+    <section class="reader">
+      <div class="readerHeader">
+        <div>
+          <span id="songNumber" class="badge">Song 1</span>
+          <h2 id="songTitle"></h2>
+        </div>
+        <button id="favoriteBtn" class="favorite">☆</button>
+      </div>
+      <pre id="lyrics" class="lyrics"></pre>
+      <div class="navButtons">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Compiled from the uploaded PDF: <em>NYIIMBO ZU BUKIZE-1 (1).pdf</em>. Review OCR/extraction before publication.</p>
+  </footer>
+
+  <script src="songs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
